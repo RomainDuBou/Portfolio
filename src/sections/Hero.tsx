@@ -54,7 +54,7 @@ export const HeroSection = () => {
           <StarIcon className="size-28 text-emerald-300" />
         </HeroOrbit>
       </div>
-      <div className="container">
+      <div className="container -mt-10">
         <div className="flex flex-col items-center">
           <Image
             src={profilPic}
@@ -66,7 +66,7 @@ export const HeroSection = () => {
               <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
             </div>
             <div className="text-sm font-medium">
-              Disponible pour une alternace
+              Disponible pour une alternance
             </div>
           </div>
         </div>
@@ -75,9 +75,8 @@ export const HeroSection = () => {
             B3 Développement Web <br /> Ynov Campus SOPHIA
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur,
-            corporis sed. Laudantium ex nisi est saepe ipsa.
-          </p>
+            A la recherche d'une alternance dans le développement web à partir du 6 janvier 2025. <br />
+            2 semaines en entreprise/1 semaine de formation pour allier pratique et montée en compétences.</p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
