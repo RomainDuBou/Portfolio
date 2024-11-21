@@ -85,43 +85,40 @@ export const AboutSection = () => {
         />
         <div className="mt-20">
           <Card className="h-[350px]">
-            <CardHeader title="Mes Livres" description="Découvrez les livres qui m'ont le plus marqué" />
-              <div className="justify-center items-center gap-4">
-                <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-                  <span className="font-semibold">Ma liste de lecture</span>
-                  <ArrowUpRightIcon className="size-4" />
-                </button>
-              </div>
+            <CardHeader
+              title="Mes Livres"
+              description="Découvrez les livres qui m'ont le plus marqué"
+            />
+            <div className="justify-center items-center gap-4">
+              <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+                <span className="font-semibold">Ma liste de lecture</span>
+                <ArrowUpRightIcon className="size-4" />
+              </button>
+            </div>
             <div className="w-40 mx-auto mt-8">
               <Image src={BookImage} alt="Book cover" />
             </div>
           </Card>
           <Card>
-            <div>
-              <StarIcon />
-              <h3>Ma Boîte à Outils</h3>
-              <p>
-                Explorez les technologies et les outils utilisés pour développer
-                mes compétences
-              </p>
-            </div>
+            <CardHeader
+              title="Ma Boîte à Outils"
+              description="Explorez les technologies et les outils utilisés pour développer
+                mes compétences"
+            />
             <div>
               {toolboxItems.map((item) => (
-                <div key={item.title}>
+                <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg">
                   <TechIcon component={item.iconType} />
-                  <span>{item.title}</span>
+                  <span className="font-semibold">{item.title}</span>
                 </div>
               ))}
             </div>
           </Card>
           <Card>
-            <div>
-              <StarIcon />
-              <h3>Au delà du code</h3>
-              <p>
-                Explorez mes intérets et mes passions au delà du monde digital
-              </p>
-            </div>
+          <CardHeader
+              title="Au delà du code"
+              description="Explorez mes intérets et mes passions au delà du monde digital"
+            />
             <div>
               {hobbies.map((hobby) => (
                 <div key={hobby.title}>
