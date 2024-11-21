@@ -117,7 +117,7 @@ export const AboutSection = () => {
           <Card>
             <div>
               <StarIcon />
-              <h3>Au delà de l'informatique</h3>
+              <h3>Au delà du code</h3>
               <p>
                 Explorez mes intérets et mes passions au delà du monde digital
               </p>
