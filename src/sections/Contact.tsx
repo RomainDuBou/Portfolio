@@ -16,7 +16,7 @@ export const ContactSection = () => {
             <div>
               <h2 className="font-serif text-2xl md:text-3xl">Me contacter</h2>
               <p className="text-sm md:text-base mt-2">
-                Mon profil correspond à vos critères de recherche ? N'hésitez
+                Mon profil correspond à vos critères de recherche ? N&apos;hésitez
                 pas à me contacter pour en savoir plus
               </p>
             </div>
