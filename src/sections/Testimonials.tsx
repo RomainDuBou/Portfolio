@@ -53,7 +53,7 @@ export const TestimonialsSection = () => {
                 {testimonials.map((testimonial) => (
                   <Card
                     key={testimonial.name}
-                    className="max-w-xs md:max-w-md md:p-8 hover:-rotate-3 transition duration-300"
+                    className="max-w-xs md:max-w-md p-6 md:p-8 hover:-rotate-3 transition duration-300"
                   >
                     <div className="flex gap-4 items-center">
                       <div className="size-14 bg-gray-700 inline-flex items-center justify-center rounded-full flex-shrink-0">
