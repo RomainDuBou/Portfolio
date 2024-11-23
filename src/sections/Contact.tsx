@@ -16,15 +16,19 @@ export const ContactSection = () => {
             <div>
               <h2 className="font-serif text-2xl md:text-3xl">Me contacter</h2>
               <p className="text-sm md:text-base mt-2">
-                Mon profil correspond à vos critères de recherche ? N&apos;hésitez
-                pas à me contacter pour en savoir plus
+                Mon profil correspond à vos critères de recherche ?
+                N&apos;hésitez pas à me contacter pour en savoir plus
               </p>
             </div>
             <div>
-              <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-l-green-900">
-                <span className="font-semibold">Contact</span>
+              <a
+                href="https://www.linkedin.com/in/romain-thillaye-du-boullay-824632174/"
+                className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-l-green-900 z-10"
+                target="_blank"
+              >
+                Contact
                 <ArrowUpRightIcon className="size-4" />
-              </button>
+              </a>
             </div>
           </div>
         </div>

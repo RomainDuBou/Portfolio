@@ -1,3 +1,4 @@
+"use client";
 import SectionHeader from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import StarIcon from "@/assets/icons/star.svg";
@@ -16,6 +17,8 @@ import emoji from "@/assets/images/memoji.png";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/Toolbox";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const toolboxItems = [
   {
@@ -87,9 +90,16 @@ const hobbies = [
     left: "45%",
     top: "70%",
   },
+  {
+    title: "Voyage",
+    emoji: "🛫",
+    left: "10%",
+    top: "70%",
+  },
 ];
 
 export const AboutSection = () => {
+  const constraintRef = useRef(null);
   return (
     <div className="pb-20 lg:py-28" id="about">
       <div className="container">
@@ -106,10 +116,13 @@ export const AboutSection = () => {
                 description="Découvrez les livres qui m'ont le plus marqué"
               />
               <div className="justify-center items-center gap-4">
-                <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl md:text-sm -mt-5 ml-5">
-                  <span className="font-semibold">Ma liste de lecture</span>
-                  <ArrowUpRightIcon className="size-4" />
-                </button>
+              <a
+            href="https://www.goodreads.com/user/show/172477312-romain-db"
+            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl md:text-sm -mt-5 ml-5 z-10 font-semibold" target="_blank"
+          >
+            Ma liste de lecture
+            <ArrowUpRightIcon className="size-4" />
+          </a>
               </div>
               <div className="w-40 mx-auto mt-5">
                 <Image src={BookImage} alt="Book cover" />
@@ -122,11 +135,15 @@ export const AboutSection = () => {
                 mes compétences"
                 className=""
               />
-              <ToolboxItems items={toolboxItems} className="" />
+              <ToolboxItems
+                items={toolboxItems}
+                className=""
+                itemsWrapperClassName="animate-move-left [animation-duration:30s]"
+              />
               <ToolboxItems
                 items={toolboxItems}
                 className="mt-6"
-                itemsWrapperClassName="-translate-x-1/2"
+                itemsWrapperClassName="animate-move-right [animation-duration:15s]"
               />
             </Card>
           </div>
@@ -137,21 +154,23 @@ export const AboutSection = () => {
                 description="Explorez mes intérets et mes passions au delà du monde digital"
                 className="px-6 pt-6"
               />
-              <div className="relative flex-1">
+              <div className="relative flex-1" ref={constraintRef}>
                 {hobbies.map((hobby) => (
-                  <div
+                  <motion.div
                     key={hobby.title}
                     className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
                     style={{
                       left: hobby.left,
                       top: hobby.top,
                     }}
+                    drag
+                    dragConstraints={constraintRef}
                   >
                     <span className="font-medium text-gray-950">
                       {hobby.title}
                     </span>
                     <span>{hobby.emoji}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Card>
@@ -162,6 +181,8 @@ export const AboutSection = () => {
                 className="h-full w-full object-cover"
               />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                 <Image src={emoji} alt="smile emoji" className="size-20" />
               </div>
             </Card>

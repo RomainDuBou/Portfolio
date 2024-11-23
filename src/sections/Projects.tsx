@@ -80,7 +80,7 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank">
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto p-7 px-8 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                       <span>Explorer mon repo GitHub </span>
                       <ArrowUpRightIcon className="size-4" />
