@@ -121,12 +121,10 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-4xl text-center mt-8 tracking-wide">
-            B3 Développement Web <br /> Ynov Campus SOPHIA
+            Développement Web <br /> 
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            A la recherche d&apos;une alternance dans le développement web à
-            partir du 6 janvier 2025. <br />2 semaines en entreprise/1 semaine
-            de formation pour allier pratique et montée en compétences.
+            A la recherche d&apos;une alternance dans le développement web / Rythme flexible
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
